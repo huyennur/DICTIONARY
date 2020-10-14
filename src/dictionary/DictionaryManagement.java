@@ -60,22 +60,12 @@ public class DictionaryManagement {
         return lookup;
     }
 
-    public String addWord(String s) {
-        if(!s.contains("@")) {
-            return "Please enter:" + "\n" + "\"word\" @ \"its meaning\"!";
-        }
-        if (dictionaryLookup(s).equals("Not find")) {
-            int x = s.lastIndexOf("@");
-            if (x != -1) {
-                en = s.substring(0, x - 1);
-                vi = s.substring(x + 2);
-                Word w = new Word(en, vi);
-                words.add(w);
-            }
-        } else {
-            return s + " has already been" + "\n" + "in dictionary";
-        }
-        return s + "\n" + " has been added";
+    public String addWord(String s1, String s2) {
+        if (dictionaryLookup(s1).equals("Not find")) {
+            Word w = new Word(s1, s2);
+            words.add(w);
+        } else return "The word has already been" + "\n" + "in dictionary!";
+        return "The word has been added!";
     }
 
     public String deleteWord(String s) {
@@ -103,4 +93,5 @@ public class DictionaryManagement {
             return "Error in export to file";
         }
     }
+
 }
