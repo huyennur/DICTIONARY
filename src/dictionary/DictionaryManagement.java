@@ -64,8 +64,8 @@ public class DictionaryManagement {
         if (dictionaryLookup(s1).equals("Not find")) {
             Word w = new Word(s1, s2);
             words.add(w);
-        } else return "The word has already been" + "\n" + "in dictionary!";
-        return "The word has been added!";
+        } else return "\"" + s1 + "\"" + " has already" + "\n" + "been in dictionary!";
+        return "\"" + s1 + "\"" + " has been added!";
     }
 
     public String deleteWord(String s) {
@@ -77,8 +77,8 @@ public class DictionaryManagement {
                 break;
             }
         }
-        if (check) return s + " is not" + "\n" + "in dictionary";
-        else return s + "\n" + " has been removed";
+        if (check) return "\"" + s + "\"" + " is not" + "\n" + "in dictionary";
+        else return "\"" + s + "\"" + " has" + "\n" + "been removed";
     }
 
     public String dictionaryExportToFile() {

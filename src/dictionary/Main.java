@@ -13,7 +13,7 @@ public class Main extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception{
-        Parent root = FXMLLoader.load(getClass().getResource("../Controllers/DictionaryDesign.fxml"));
+        Parent root = FXMLLoader.load(getClass().getResource("../Controllers/dic1.fxml"));
 
         root.setOnMousePressed(event -> {
             xOffset = event.getSceneX();

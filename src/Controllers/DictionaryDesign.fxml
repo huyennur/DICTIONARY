@@ -6,9 +6,9 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="420.0" prefWidth="735.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DictionaryController">
+<AnchorPane prefHeight="521.0" prefWidth="751.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controllers.DictionaryController">
    <children>
-      <VBox layoutX="-4.0" prefHeight="420.0" prefWidth="244.0" style="-fx-background-color: #FFB6C1#FFB6C1;">
+      <VBox layoutX="-4.0" prefHeight="521.0" prefWidth="242.0" style="-fx-background-color: #FFB6C1#FFB6C1;">
          <children>
             <Pane prefHeight="201.0" prefWidth="241.0">
                <children>
@@ -79,18 +79,18 @@
                   </Text>
                </children>
             </AnchorPane>
-            <Label fx:id="label1" alignment="CENTER" prefHeight="62.0" prefWidth="244.0" textAlignment="CENTER" textFill="#700f13">
+            <Label fx:id="label1" alignment="CENTER" prefHeight="46.0" prefWidth="242.0" textAlignment="CENTER" textFill="#700f13">
                <font>
                   <Font name="Times New Roman Italic" size="18.0" />
                </font>
             </Label>
          </children>
       </VBox>
-      <VBox layoutX="239.0" layoutY="97.0" prefHeight="321.0" prefWidth="506.0">
+      <VBox layoutX="239.0" layoutY="97.0" prefHeight="416.0" prefWidth="506.0">
          <children>
-            <GridPane prefHeight="327.0" prefWidth="506.0">
+            <GridPane prefHeight="425.0" prefWidth="497.0">
                <columnConstraints>
-                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="506.0" />
+                  <ColumnConstraints hgrow="SOMETIMES" maxWidth="506.0" minWidth="10.0" prefWidth="496.0" />
                   <ColumnConstraints hgrow="SOMETIMES" maxWidth="253.0" minWidth="0.0" prefWidth="0.0" />
                </columnConstraints>
                <rowConstraints>
@@ -126,16 +126,16 @@
                         </Button>
                      </children>
                   </HBox>
-                  <Pane prefHeight="200.0" prefWidth="200.0" GridPane.rowIndex="1">
+                  <Pane prefHeight="309.0" prefWidth="498.0" GridPane.rowIndex="1">
                      <children>
-                        <VBox layoutX="317.0" prefHeight="277.0" prefWidth="183.0" />
-                        <TitledPane animated="false" collapsible="false" prefHeight="277.0" prefWidth="137.0" text="WORD LIST" textFill="#0d2990">
+                        <VBox layoutX="136.0" prefHeight="277.0" prefWidth="365.0" />
+                        <TitledPane animated="false" collapsible="false" layoutY="-75.0" prefHeight="367.0" prefWidth="139.0" text="WORD LIST" textFill="#0d2990">
                            <content>
                               <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="228.0" prefWidth="181.0">
                                  <children>
-                                    <ScrollPane fx:id="ins" fitToHeight="true" fitToWidth="true" layoutX="-2.0" layoutY="-5.0" prefHeight="245.0" prefWidth="189.0">
+                                    <ScrollPane fx:id="ins" fitToHeight="true" fitToWidth="true" layoutX="-2.0" layoutY="-5.0" prefHeight="341.0" prefWidth="139.0">
                                        <content>
-                                          <ListView fx:id="wordList" onMouseClicked="#mouseClicked" prefHeight="243.0" prefWidth="139.0" />
+                                          <ListView fx:id="wordList" onMouseClicked="#chooseWordFromList" prefHeight="292.0" prefWidth="137.0" />
                                        </content>
                                     </ScrollPane>
                                  </children>
@@ -145,9 +145,9 @@
                               <Font name="Times New Roman Bold Italic" size="20.0" />
                            </font>
                         </TitledPane>
-                        <TitledPane animated="false" collapsible="false" layoutX="139.0" prefHeight="277.0" prefWidth="358.0" text="ENG - VIET (MEANING)" textFill="#0d2990">
+                        <TitledPane animated="false" collapsible="false" layoutX="139.0" layoutY="-75.0" prefHeight="373.0" prefWidth="374.0" text="ENG - VIET (MEANING)" textFill="#0d2990">
                            <content>
-                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                              <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="342.0" prefWidth="372.0">
                                  <children>
                                     <Label fx:id="label2" layoutX="2.0" layoutY="86.0" onMouseClicked="#mouseClicked" prefHeight="85.0" prefWidth="358.0">
                                        <font>
@@ -170,6 +170,12 @@
                            </font>
                         </TitledPane>
                      </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
                   </Pane>
                </children>
                <VBox.margin>
@@ -180,7 +186,7 @@
       </VBox>
       <Pane layoutX="239.0" layoutY="2.0" prefHeight="93.0" prefWidth="506.0" AnchorPane.leftAnchor="239.0">
          <children>
-            <AnchorPane fx:id="status" prefHeight="85.0" prefWidth="495.0" style="-fx-background-color: #FFE4E1#FFE4E1;">
+            <AnchorPane fx:id="status" prefHeight="85.0" prefWidth="506.0" style="-fx-background-color: #FFE4E1#FFE4E1;">
                <children>
                   <Text fill="#0b5b90" fontSmoothingType="LCD" layoutY="65.0" strokeType="OUTSIDE" strokeWidth="0.0" text="ENGLISH  -  VIETNAMESE" textAlignment="CENTER" wrappingWidth="474.22900390625">
                      <font>
