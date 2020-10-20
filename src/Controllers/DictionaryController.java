@@ -77,13 +77,19 @@ public class DictionaryController implements Initializable {
     private Label labelEdit;
 
     @FXML
+    private TextField newMeaning;
+
+    @FXML
     private Button export;
+
+    @FXML
+    private Label labelExport;
 
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         try {
-            dicMa.insertFromFile();
+            dicMa.insertFromDatabase();
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -95,11 +101,12 @@ public class DictionaryController implements Initializable {
         wordList.getItems().clear();
         label2.setText("");
         type.setText("");
+        labelExport.setText("");
     }
 
     @FXML
     public void showList(String s) {
-        for(String i : dicC.dictionarySearcher(s, dicMa.words)) {
+        for(String i : dicMa.dictionarySearcher1(s)) {
             list.add(i);
         }
         wordList.getItems().addAll(list);
@@ -147,7 +154,9 @@ public class DictionaryController implements Initializable {
     @FXML
     public void exporting(MouseEvent event) {
         if(event.getSource() == export) {
-
+            clearLabel();
+            dicMa.dictionaryExportToFile();
+            labelExport.setText("Export to file successfully!");
         }
     }
 
@@ -217,8 +226,9 @@ public class DictionaryController implements Initializable {
     public void editingWord(ActionEvent event) {
         String s1 = oldWord.getText();
         String s2 = newWord.getText();
+        String s3 = newMeaning.getText();
         if(event.getSource() == editButton) {
-            labelRemove.setText("hi");
+            labelEdit.setText(dicMa.editWord(s1, s2, s3));
         }
     }
 }
